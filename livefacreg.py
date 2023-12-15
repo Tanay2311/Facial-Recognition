@@ -99,7 +99,42 @@ class FaceRecognition:
         plt.grid(True)
         plt.show()
 
+
+    def plot_confidence_histogram(self):
+        plt.figure(figsize=(8, 6))
+        plt.hist(self.confidence_data, bins=20, color='skyblue', edgecolor='black')
+        plt.xlabel('Confidence Level')
+        plt.ylabel('Frequency')
+        plt.title('Distribution of Confidence Levels')
+        plt.grid(True)
+        plt.show()
+
+    def plot_confidence_over_time(self):
+        plt.figure(figsize=(10, 6))
+        plt.plot(range(len(self.confidence_data)), self.confidence_data, marker='o', linestyle='-')
+        plt.xlabel('Frames Processed')
+        plt.ylabel('Confidence Level')
+        plt.title('Change in Confidence Levels Over Time')
+        plt.grid(True)
+        plt.show()
+
+    def plot_confidence_boxplot(self):
+        plt.figure(figsize=(8, 6))
+        plt.boxplot(self.confidence_data)
+        plt.ylabel('Confidence Level')
+        plt.title('Boxplot of Confidence Levels')
+        plt.grid(True)
+        plt.show()
+
+    
+
+
+
 if __name__ == '__main__':
     fr = FaceRecognition()
     fr.run_recognition()
     fr.plot_confidence_graph()
+    fr.plot_confidence_histogram()
+    fr.plot_confidence_over_time()
+    fr.plot_confidence_boxplot()
+
