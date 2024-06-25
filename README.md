@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a facial recognition system using OpenCV and Python, enhanced with exploratory data analysis methods. Developed in 2023, it achieves high accuracy and real-time performance.
+This project implements a facial recognition system using OpenCV and Python, enhanced with exploratory data analysis methods.It achieves high accuracy and real-time performance.
 
 ## Key Features
 
